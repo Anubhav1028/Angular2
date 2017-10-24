@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div>
+        <h1>{{getDomain()}}</h1>
+        <img id='myim' [src]='imagePath' />
+        <!--<my-empl></my-empl>-->
+        <empl-list></empl-list>
+        <br/><br/>
+        <input [value]='inputValue' (input)='inputValue=$event.target.value' />
+        You entered:{{inputValue}}
+        <br /><br />
+        <input [(ngModel)]='name' />
+        You entered:{{name}}
+        <br /><br />
+        <button class='colorClass italicClass boldClass' [class.italicClass]='applyItalicClass'>Mybutton1</button>
+        <br /><br />
+        <button class='colorClass italicClass' [ngClass]='toggleClasses()'>Mybutton2</button>
+        <br /><br />
+        <button style="color:red;" [style.font-weight]="isBold ? 'bold': 'normal'" [style.fontSize.px]="fontSize">Mybutton3</button>
+        <br /><br />
+        <button [ngStyle]='applyStyles()'>Mybutton4</button>
+        <br /><br />
+        <button (click)='buttonClick()'>buttonEvent</button>
+        <br /><br />
+    </div>
+</body>
+</html>
